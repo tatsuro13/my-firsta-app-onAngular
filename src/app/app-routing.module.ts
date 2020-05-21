@@ -4,13 +4,13 @@ import { ProductModule } from './product/product.module';
 
 
 const routes: Routes = [
-  // {path: '', component: ProductListComponent},
+  { path: '', redirectTo: 'products', pathMatch: 'full' },
   // {path: 'detail', component: ProductDetailComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes),
-  ProductModule
+    ProductModule
   ],
   exports: [RouterModule]
 })
