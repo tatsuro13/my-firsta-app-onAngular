@@ -10,8 +10,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
   test: Date = new Date();
-  focus;
-  focus1;
 
   errors: any = [];
 
@@ -21,7 +19,6 @@ export class LoginComponent implements OnInit {
     console.log(loginrForm.value);
     this.authService.login(loginrForm.value).subscribe(
       (token) => {
-        console.log(token);
         this.router.navigate(['/products']);
       },
       (err: HttpErrorResponse) => {

@@ -10,8 +10,6 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   test: Date = new Date();
-  focus;
-  focus1;
 
   errors: any = [];
   constructor(private authService: AuthService, private router: Router) {}
