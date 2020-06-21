@@ -24,6 +24,10 @@ export class AuthService {
   //   getProducts(): Observable<any> {
   //     return this.http.get('/api/v1/products');
 
+  getToken() {
+    return localStorage.getItem('app-auth');
+  }
+
   isAuthenticated() {
     return moment().isBefore(moment.unix(this.decodedToken.exp));
   }
